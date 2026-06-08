@@ -15,9 +15,25 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class UserManager {
 
-    public void  create() {
-      log.info("User created");
+    // Kötü olan tüm dependecylerin tek bir yerden yönetimini sağlamak.
+    public void createNewAccount(){
+        validate();
+        create();
+        get(); // gerçekten user create edildi mi? emin olmak için.
+        sendEmail();
+        generateReport();
     }
+
+    // yeni bir kullanıcı hesabı oluşturuyor ama aşağıdaki bazı aşamalardan geçiyor
+    public void  create() {
+
+        // kullanıcıya crm uygumasında bir oturum açılıyor
+        // kullanıcıya hesap aktivasyonu için sms gönderiliyor
+        // HR servisine kullanıcı bilgileri gönderiliyor
+        // kullanıcıya hoş geldin maili gönderiliyor
+        log.info("User created");
+    }
+
 
     public void delete() {
         log.info("User deleted");
@@ -46,5 +62,8 @@ public class UserManager {
     public void generateReport() {
         log.info("Report generated for user");
     }
+
+
+
 
 }
