@@ -1,8 +1,5 @@
 package com.mrtlptkn.javaoopandsolidprinciples.controller;
 
-import com.mrtlptkn.javaoopandsolidprinciples.contact.InvestmentContact;
-import com.mrtlptkn.javaoopandsolidprinciples.oop.banking.best.InvestmentAccount;
-import com.mrtlptkn.javaoopandsolidprinciples.oop.fund.InvestmentFund;
 import com.mrtlptkn.javaoopandsolidprinciples.solid.srp.best.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -13,12 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.math.BigDecimal;
-
 @RestController
-@RequestMapping("/api/dependency-injection")
-@Tag(name = "Dependency Injection", description = "APIs demonstrating Dependency Injection patterns")
-public class DependecyInjection {
+@RequestMapping("/api/srp")
+@Tag(name = "Srp Controller", description = "APIs demonstrating Dependency Injection patterns")
+public class SrpController {
 
     // controller seviyesinde de bir dependecy injection olmalı.
 
@@ -37,7 +32,7 @@ public class DependecyInjection {
 
 
 
-    public DependecyInjection(UserValidator userValidator, UserRepository userRepository, EmailService emailService, UserReportService userReportService) {
+    public SrpController(UserValidator userValidator, UserRepository userRepository, EmailService emailService, UserReportService userReportService) {
         this.userValidator = userValidator;
         this.userRepository = userRepository;
         this.emailService = emailService;
