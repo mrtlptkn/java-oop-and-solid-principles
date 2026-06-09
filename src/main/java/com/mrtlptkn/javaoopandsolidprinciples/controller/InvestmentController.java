@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.math.BigDecimal;
 
 @RestController
-@RequestMapping("/investment")
+@RequestMapping("/api/investment")
 public class InvestmentController {
 
 
