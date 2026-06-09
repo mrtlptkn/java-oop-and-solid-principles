@@ -1,6 +1,7 @@
 package com.mrtlptkn.javaoopandsolidprinciples.solid.srp.best;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Repository;
 
 
 // veri erişiminde sorumlu sınıf
@@ -9,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 // Genel bir repository açmanın faydası veya zararı ne olurdu tartışalım.
 
 @Slf4j
+@Repository
 public class UserRepository {
 
     public void create(){

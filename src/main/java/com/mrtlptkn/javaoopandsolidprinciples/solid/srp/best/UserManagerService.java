@@ -10,6 +10,10 @@ package com.mrtlptkn.javaoopandsolidprinciples.solid.srp.best;
 // 3. UserReportService ile çalışmak zorunda
 
 // Spring Ioc Yarının konusu olsun @Component, @Service, @Respository
+
+import org.springframework.stereotype.Service;
+
+@Service
 public class UserManagerService {
 
     // DI ile bu sınıf artık, loose coupled çalışıyor. tam olabilmesi için bu örnekteki sınıfların interface sahip olması lazım. Not: Yarın bunuda yapalım.
